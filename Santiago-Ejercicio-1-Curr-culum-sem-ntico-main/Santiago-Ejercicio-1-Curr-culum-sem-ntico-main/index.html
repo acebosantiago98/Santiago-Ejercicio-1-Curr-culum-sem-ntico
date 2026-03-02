@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Primera página de mi currículum">
     <title>Currículum</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div>
             <img src="E3E9B3D7-D048-48AB-A74A-7BDA4321AE5B_4_5005_c.jpeg" alt="Foto de perfil" style="width:30%; height:auto; border-radius:0%;">
         </div>
-        <div>
+        <div id="nombre">
             <h1>Santiago Acebo</h1>
              <h3><em>Diseñador gráfico</em></h3>
         </div>
-<nav id="menu">
+<nav class="menu-nav">
     <ul>
         <li><a href="http://instagram.com">Instagram</a></li>
         <li><a href="https://www.linkedin.com">Linkedin</a></li>
         <li><a href="contact.html">Correo</a></li>
     </ul>
 </nav>
+    </header>
 <main>
     <section>
-        <h2>Experiencia Laboral</h2>
+        <h2 style="margin-left: 20px;">Experiencia Laboral</h2>
         <article>
 <h4><em>Estudio creativo independiente · Valencia</em></h4>
 <div>
@@ -74,6 +76,44 @@ Formación especializada
 <div>Gestión del tiempo y organización de proyectos</div>
 </article>
 </main>
-    </header>
+ <form action="procesar.php" method="post" autocomplete="on">
+        <div class="form-group">
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="formName" required>
+        </div>
+        <div class="form-group">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+
+    
+        <label for="phone">Teléfono de empresa:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+        <select name="servicio" id="servicio">
+            <option value="">Tipo entrevista</option>
+            <option value="web">Entrevista Presencial</option>
+            <option value="mobile">Entrevista Virtual</option>
+            <option value="Telefónica">Entrevista Telefónica</option>
+        </select>
+        <label for="fecha_sugerida">Fecha sugerida:</label>
+        <input type="date" name="Fecha sugerida" id="fecha_sugerida" required>
+        <label for="nivel_urgencia">Nivel de urgencia (1-5):</label>
+        <input type="range" name="Nivel de Urgencia" id="nivel_urgencia" min="1" max="5" value="2" required>
+        <label for="Mensaje_adicional">Mensaje adicional:</label>
+        <textarea name="Mensaje adicional" id="Mensaje_adicional"></textarea>
+
+        
+        <button type="reset">Limpiar</button>
+
+        <button type="submit">Enviar</button>
+
+        </div>
+
+
+    </form>
 </body>
 </html>
